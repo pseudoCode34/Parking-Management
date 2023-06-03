@@ -7,8 +7,9 @@ module com.example.parkingmanagement {
     requires com.dlsc.formsfx;
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
+	requires org.jetbrains.annotations;
 
 
-    opens com.example.parkingmanagement to javafx.fxml;
+	opens com.example.parkingmanagement to javafx.fxml;
     exports com.example.parkingmanagement;
 }

@@ -21,6 +21,5 @@ public abstract class ParkingLot {
 
 	}
 
-
 	public abstract boolean add(ParkingSlot parkingSlot);
 }

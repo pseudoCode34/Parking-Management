@@ -18,8 +18,8 @@ ext {
     junitVersion = '5.9.1'
 }
 
-sourceCompatibility = '18'
-targetCompatibility = '18'
+sourceCompatibility = "18.PREVIEW"
+targetCompatibility = "18.PREVIEW"
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
@@ -44,6 +44,8 @@ dependencies {
         exclude(group: 'org.openjfx')
     }
     implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
+    implementation 'org.jetbrains:annotations:24.0.0'
+    implementation 'org.mockito:mockito-testng:0.4.30'
 
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -51,6 +53,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testImplementation 'org.testng:testng:7.7.0'
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
 }
 
 test {
